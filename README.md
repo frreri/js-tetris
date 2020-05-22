@@ -1,3 +1,4 @@
 # js-tetris
 
-Just a simple tetris game project to practice some JavaScript
+Practicing/learning JavaScript with a basic tetris project.
+In progress.

@@ -61,13 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function draw() {
         current.forEach(index => {
             squares[currentPosition + index].classList.add('tetromino');
-        })
+        });
     }
 
     function undraw() {
         current.forEach(index => {
             squares[currentPosition + index].classList.remove('tetromino');
-        })
+        });
     }
 
     timerId = setInterval(moveDown, 1000);

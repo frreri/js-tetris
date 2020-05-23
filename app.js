@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid');
     let squares = Array.from(document.querySelectorAll('.grid div'));
+    // let squares = [];
+    // for (let i = 0; i < 200; i++) {
+    //     squareDiv = document.createElement("div");
+    //     squareDiv.classList.add('grid', 'div');
+    //     grid.appendChild(squareDiv);
+    //     squares.push(squareDiv);
+    // }
     const scoreDisplay = document.querySelector('#score');
     const startButton = document.querySelector('#start-button');
     const width = 10;

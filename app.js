@@ -12,48 +12,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.querySelector('#start-button');
     const width = 10;
 
-    const lTetromino = [
+    const lShape = [
         [1, width + 1, width * 2 + 1, 2],
         [width, width + 1, width + 2, width * 2 + 2],
         [1, width + 1, width * 2 + 1, width * 2],
         [width, width * 2, width * 2 + 1, width * 2 + 2]
     ];
 
-    const zTetromino = [
+    const zShape = [
         [0, width, width + 1, width * 2 + 1],
         [width + 1, width + 2, width * 2, width * 2 + 1],
         [0, width, width + 1, width * 2 + 1],
         [width + 1, width + 2, width * 2, width * 2 + 1]
     ];
 
-    const tTetromino = [
+    const tShape = [
         [1, width, width + 1, width + 2],
         [1, width + 1, width + 2, width * 2 + 1],
         [width, width + 1, width + 2, width * 2 + 1],
         [1, width, width + 1, width * 2 + 1]
     ];
 
-    const oTetromino = [
+    const oShape = [
         [0, 1, width, width + 1],
         [0, 1, width, width + 1],
         [0, 1, width, width + 1],
         [0, 1, width, width + 1]
     ];
 
-    const iTetromino = [
+    const iShape = [
         [1, width + 1, width * 2 + 1, width * 3 + 1],
         [width, width + 1, width + 2, width + 3],
         [1, width + 1, width * 2 + 1, width * 3 + 1],
         [width, width + 1, width + 2, width + 3]
     ];
 
-    const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino];
+    const allShapes = [lShape, zShape, tShape, oShape, iShape];
 
     let currentPosition = 4;
     let currentRotation = 0;
 
-    let random = Math.floor(Math.random() * theTetrominoes.length);
-    let current = theTetrominoes[random][currentRotation];
+    let random = Math.floor(Math.random() * allShapes.length);
+    let current = allShapes[random][currentRotation];
 
     function draw() {
         current.forEach(index => {
@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
             current.forEach(index => squares[currentPosition + index].classList.add('taken'));
             // new tetromino
-            random = Math.floor(Math.random() * theTetrominoes.length);
-            current = theTetrominoes[random][currentRotation];
+            random = Math.floor(Math.random() * allShapes.length);
+            current = allShapes[random][currentRotation];
             currentPosition = 4;
             draw();
         }

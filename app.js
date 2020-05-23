@@ -70,9 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    // move tetromino down at set interval
-    timerId = setInterval(moveDown, 1000);
 
+    timerId = setInterval(moveDown, 1000);
     function moveDown() {
         undraw();
         currentPosition += width;

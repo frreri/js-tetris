@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-
     timerId = setInterval(moveDown, 1000);
     function moveDown() {
         undraw();

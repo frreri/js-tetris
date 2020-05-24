@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     // Setting up the grid and it's child elements etc
     const grid = document.querySelector('.grid');
     const gridWidth = 10;
@@ -75,9 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
             nextRandom = Math.floor(Math.random() * allShapes.length);
             current = allShapes[random][currentRotation];
             currentPosition = 4;
-            draw();
             displayNextShape();
+            undraw();
             addScore();
+            draw();
             gameOver();
         }
     }
